@@ -13,9 +13,9 @@ class Product extends Model
 
     protected $fillable = [
         "passwordinput",
-          "searchinput",
-          "prependedtext",
-          "textinput",
+        "searchinput",
+        "prependedtext",
+        "textinput",
     ];
 
     protected static function newFactory()
