@@ -17,7 +17,7 @@ class ProductDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        Product::factory()->count(500000)->create();
+        Product::factory()->count(100)->create();
 
         // $this->call("OthersTableSeeder");
     }

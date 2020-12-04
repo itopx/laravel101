@@ -14,13 +14,23 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+//            $table->engine = 'MyISAM';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_unicode_ci';
+
             $table->id();
-
-            $table->string("passwordinput");
-          $table->string("searchinput");
-          $table->string("prependedtext");
-          $table->string("textinput");
-
+            $table->string('code')->unique()->nullable();
+            $table->string('name');
+            $table->string('slug')->unique()->nullable();
+            $table->longText('detail')->nullable();
+            $table->string('url')->nullable();
+            $table->string('target')->nullable();
+            $table->float('price')->nullable();
+            $table->float('sale_price')->nullable();
+            $table->integer('status')->default(0);
+            $table->integer('qty')->default(0);
+            $table->integer('view')->default(50);
+            $table->string('cover')->nullable();
             $table->timestamps();
         });
     }

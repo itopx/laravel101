@@ -12,10 +12,14 @@ class Product extends Model
     protected $table = 'products';
 
     protected $fillable = [
-        "passwordinput",
-        "searchinput",
-        "prependedtext",
-        "textinput",
+        'name',
+        'slug',
+        'price',
+        'sale_price',
+        'url',
+        'target',
+        'detail',
+        'cover',
     ];
 
     protected static function newFactory()

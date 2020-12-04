@@ -1,15 +1,16 @@
 @extends('product::layouts.master')
 
 @section('content')
-    <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('product.update', $result->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        {{ method_field('PUT') }}
         <div class="tile">
-            <h3 class="tile-title">สร้างรายการใหม่</h3>
+            <h3 class="tile-title">แก้ไขรายการ</h3>
             <div class="tile-body">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>ชื่อสินค้า</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="ระบุชื่อสินค้า" value="{{ old('name') }}">
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="ระบุชื่อสินค้า" value="{{ $result->name }}">
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -31,7 +32,7 @@
                     <div class="form-group col-md-3">
                         <label>ราคา</label>
                         <div class="input-group">
-                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" value="{{ old('price') }}" placeholder="ระบุราคา">
+                            <input class="form-control @error('price') is-invalid @enderror" type="text" name="price" value="{{ $result->price }}" placeholder="ระบุราคา">
                             <div class="input-group-append"><span class="input-group-text">฿</span></div>
                         </div>
                         @error('price')
@@ -43,7 +44,7 @@
                     <div class="form-group col-md-3">
                         <label>ราคา (ขาย)</label>
                         <div class="input-group">
-                            <input class="form-control @error('sale_price') is-invalid @enderror" type="text" name="sale_price" value="{{ old('sale_price') }}" placeholder="ระบุราคา">
+                            <input class="form-control @error('sale_price') is-invalid @enderror" type="text" name="sale_price" value="{{ $result->sale_price }}" placeholder="ระบุราคา">
                             <div class="input-group-append"><span class="input-group-text">฿</span></div>
                         </div>
                         @error('sale_price')
@@ -56,23 +57,23 @@
                 <div class="form-row">
                     <div class="form-group col-md-8">
                         <label>ลิงค์เชื่อมโยง</label>
-                        <input type="text" name="url" class="form-control" value="{{ old('url') }}" placeholder="ระบุลิงค์เชื่อมโยง">
+                        <input type="text" name="url" class="form-control" value="{{ $result->url }}" placeholder="ระบุลิงค์เชื่อมโยง">
                     </div>
                     <div class="form-group col-md-4">
                         <label>การแสดง (Target)</label>
                         <select name="target" class="form-control">
                             <option value="">-เลือก-</option>
-                            <option value="_parent" @if(old('target') == "_parent") selected @endif>_parent (เปิดหน้าต่างที่เป็นหน้าต่างระดับ Parent)</option>
-                            <option value="_blank" @if(old('target') == "_blank") selected @endif>_blank (เปิดหน้าต่างใหม่ทุกครั้ง)</option>
-                            <option value="_self" @if(old('target') == "_self") selected @endif>_self (เปิดหน้าต่างเดิม)</option>
-                            <option value="_top" @if(old('target') == "_top") selected @endif>_top (เปิดหน้าต่างในระดับบนสุด)</option>
+                            <option value="_parent" @if($result->target == "_parent") selected @endif>_parent (เปิดหน้าต่างที่เป็นหน้าต่างระดับ Parent)</option>
+                            <option value="_blank" @if($result->target == "_blank") selected @endif>_blank (เปิดหน้าต่างใหม่ทุกครั้ง)</option>
+                            <option value="_self" @if($result->target == "_self") selected @endif>_self (เปิดหน้าต่างเดิม)</option>
+                            <option value="_top" @if($result->target == "_top") selected @endif>_top (เปิดหน้าต่างในระดับบนสุด)</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label>รายละเอียด</label>
-                        <textarea class="form-control" name="details" id="details" rows="8" placeholder="ระบุรายละเอียด...">{{ old('details') }}</textarea>
+                        <textarea class="form-control" name="details" id="details" rows="8" placeholder="ระบุรายละเอียด...">{{ $result->details }}</textarea>
                     </div>
                 </div>
             </div>

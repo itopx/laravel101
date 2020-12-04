@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data['lists'] = Product::paginate(20);
+        $data['lists'] = Product::orderBy('id', 'DESC')->paginate(20);
 
         return view('product::index', $data);
     }
@@ -36,7 +36,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        return Product::create($request->all());
+        Product::create($request->all());
+
+        return redirect()->route('product.index');
     }
 
     /**
@@ -56,7 +58,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return view('product::edit');
+        $data['result'] = Product::where('id',$id)->first();
+
+        return view('product::edit', $data);
     }
 
     /**
@@ -67,7 +71,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->update($request->all());
+
+        return redirect()->route('product.index');
     }
 
     /**
