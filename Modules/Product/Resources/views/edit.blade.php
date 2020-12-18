@@ -73,7 +73,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label>รายละเอียด</label>
-                        <textarea class="form-control" name="details" id="details" rows="8" placeholder="ระบุรายละเอียด...">{{ $result->details }}</textarea>
+                        <textarea class="form-control" name="detail" id="detail" rows="8" placeholder="ระบุรายละเอียด...">{{ $result->details }}</textarea>
                     </div>
                 </div>
             </div>
