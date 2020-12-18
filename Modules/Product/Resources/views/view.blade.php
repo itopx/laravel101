@@ -26,7 +26,7 @@
                     </tr>
                     <tr>
                         <td class="text-nowrap">รายละเอียด</td>
-                        <td>{{ $result->detail }}</td>
+                        <td>{{ nl2br($result->detail) }}</td>
                     </tr>
                 </table>
             </div>
