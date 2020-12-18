@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="681ad144-2a8d-4976-97ae-5479a74e3e34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_12_2_20__3_22_PM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_12_2_20__3_21_PM_artisan.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_12_4_20__2_30_PM_artisan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_12_4_20__2_30_PM_artisan.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Database/Migrations/2020_12_02_084744_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Database/Migrations/2020_12_02_084744_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Database/Seeders/ProductDatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Database/Seeders/ProductDatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Entities/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Entities/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Providers/ProductServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Providers/ProductServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Resources/views/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules/Product/Resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Product/Resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Product/Resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,9 +160,9 @@
       <command value="artisan make:migration create_products_table Product" />
       <command value="artisan module:make-migration create_products_table Product" />
       <command value="php artisan module:make-model Product" />
-      <command value="artisan serve" />
       <command value="artisan module:migrate Product" />
       <command value="artisan module:seed Product" />
+      <command value="artisan serve" />
     </option>
   </component>
   <component name="RunManager">
@@ -189,30 +181,47 @@
       <updated>1606897276016</updated>
       <workItem from="1606897277045" duration="2515000" />
       <workItem from="1606980539665" duration="5928000" />
-      <workItem from="1607066296588" duration="5012000" />
+      <workItem from="1607066296588" duration="5604000" />
+      <workItem from="1608274865976" duration="505000" />
     </task>
+    <task id="LOCAL-00001" summary="add: fix product module">
+      <created>1607071987388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607071987389</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: fix product module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: fix product module" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="819" height="175" key="GridCell.Tab.0.bottom" timestamp="1607067953151">
+    <state x="377" y="81" key="CommitChangelistDialog2" timestamp="1607071987222">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state width="819" height="175" key="GridCell.Tab.0.bottom/0.25.1680.968@0.25.1680.968" timestamp="1607067953151" />
-    <state width="819" height="175" key="GridCell.Tab.0.center" timestamp="1607067953150">
+    <state x="377" y="81" key="CommitChangelistDialog2/0.25.1680.968@0.25.1680.968" timestamp="1607071987222" />
+    <state width="1638" height="175" key="GridCell.Tab.0.bottom" timestamp="1608275428921">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state width="819" height="175" key="GridCell.Tab.0.center/0.25.1680.968@0.25.1680.968" timestamp="1607067953150" />
-    <state width="819" height="175" key="GridCell.Tab.0.left" timestamp="1607067953150">
+    <state width="1638" height="175" key="GridCell.Tab.0.bottom/0.25.1680.968@0.25.1680.968" timestamp="1608275428921" />
+    <state width="1638" height="175" key="GridCell.Tab.0.center" timestamp="1608275428920">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state width="819" height="175" key="GridCell.Tab.0.left/0.25.1680.968@0.25.1680.968" timestamp="1607067953150" />
-    <state width="819" height="175" key="GridCell.Tab.0.right" timestamp="1607067953150">
+    <state width="1638" height="175" key="GridCell.Tab.0.center/0.25.1680.968@0.25.1680.968" timestamp="1608275428920" />
+    <state width="1638" height="175" key="GridCell.Tab.0.left" timestamp="1608275428919">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state width="819" height="175" key="GridCell.Tab.0.right/0.25.1680.968@0.25.1680.968" timestamp="1607067953150" />
+    <state width="1638" height="175" key="GridCell.Tab.0.left/0.25.1680.968@0.25.1680.968" timestamp="1608275428919" />
+    <state width="1638" height="175" key="GridCell.Tab.0.right" timestamp="1608275428921">
+      <screen x="0" y="25" width="1680" height="968" />
+    </state>
+    <state width="1638" height="175" key="GridCell.Tab.0.right/0.25.1680.968@0.25.1680.968" timestamp="1608275428921" />
     <state x="663" y="215" key="RollbackChangesDialog" timestamp="1606982760448">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
@@ -225,13 +234,17 @@
       <screen x="0" y="25" width="1680" height="968" />
     </state>
     <state x="568" y="329" key="SymfonyComponentCompositeDataDialog/0.25.1680.968@0.25.1680.968" timestamp="1607067040148" />
-    <state x="505" y="233" width="670" height="675" key="run.anything.popup" timestamp="1607067316789">
+    <state x="440" y="233" key="Vcs.Push.Dialog.v2" timestamp="1607071990642">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state x="505" y="233" width="670" height="675" key="run.anything.popup/0.25.1680.968@0.25.1680.968" timestamp="1607067316789" />
-    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1607067307353">
+    <state x="440" y="233" key="Vcs.Push.Dialog.v2/0.25.1680.968@0.25.1680.968" timestamp="1607071990642" />
+    <state x="505" y="233" width="670" height="675" key="run.anything.popup" timestamp="1608274978769">
       <screen x="0" y="25" width="1680" height="968" />
     </state>
-    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup/0.25.1680.968@0.25.1680.968" timestamp="1607067307353" />
+    <state x="505" y="233" width="670" height="675" key="run.anything.popup/0.25.1680.968@0.25.1680.968" timestamp="1608274978769" />
+    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1608275107265">
+      <screen x="0" y="25" width="1680" height="968" />
+    </state>
+    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup/0.25.1680.968@0.25.1680.968" timestamp="1608275107265" />
   </component>
 </project>
