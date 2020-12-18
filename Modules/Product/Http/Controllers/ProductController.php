@@ -6,6 +6,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Product\Entities\Product;
+use Verot\Upload\Upload;
 
 class ProductController extends Controller
 {
@@ -36,7 +37,26 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        Product::create($request->all());
+        $result = Product::create($request->all());
+        if ($result) {
+            $handle = new Upload($_FILES['cover']);
+            if ($handle->uploaded) {
+                $filename = $handle->file_src_name_body.'_'.uniqid();
+                $handle->file_new_name_body = $filename;
+                $handle->process(storage_path('app/public/product'));
+                if ($handle->processed) {
+                    if ($request->hasFile('cover')) {
+                        Product::where('id', $result->id)->update([
+                            'cover' => $handle->file_dst_name
+                        ]);
+                    }
+
+                    $handle->clean();
+                } else {
+                    echo 'error : '.$handle->error;
+                }
+            }
+        }
 
         return redirect()->route('product.index');
     }
@@ -48,7 +68,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $data['result'] = Product::where('id',$id)->first();
+        $data['result'] = Product::where('id', $id)->first();
 
         return view('product::view', $data);
     }
@@ -60,7 +80,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $data['result'] = Product::where('id',$id)->first();
+        $data['result'] = Product::where('id', $id)->first();
 
         return view('product::edit', $data);
     }
@@ -74,7 +94,27 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::findOrFail($id);
-        $product->update($request->all());
+        $result = $product->update($request->all());
+        if ($result) {
+            $handle = new Upload($_FILES['cover']);
+            if ($handle->uploaded) {
+                $filename = $handle->file_src_name_body.'_'.uniqid();
+                $handle->file_new_name_body = $filename;
+                $handle->process(storage_path('app/public/product'));
+                if ($handle->processed) {
+                    if ($request->hasFile('cover')) {
+                        Product::where('id', $id)->update([
+                            'cover' => $handle->file_dst_name
+                        ]);
+                    }
+
+                    $handle->clean();
+                } else {
+                    echo 'error : '.$handle->error;
+                }
+            }
+        }
+
 
         return redirect()->route('product.index');
     }

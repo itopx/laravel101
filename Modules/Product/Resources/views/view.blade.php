@@ -10,7 +10,10 @@
                 <table class="table table-bordered w-50">
                     <tr>
                         <td class="text-nowrap">ภาพหน้าปก</td>
-                        <td><img src="{{ $result->cover }}" height="250"></td>
+                        <td>
+{{--                            <img src="{{ Storage::url("product/1_eL69fFA3FDjRMHSavVIKOw_5fdc6d29af7b7.jpeg") }}" height="250">--}}
+                            <img src="{{ Storage::url("product/".$result->cover) }}" height="250">
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-nowrap">ชื่อสินค้า</td>
