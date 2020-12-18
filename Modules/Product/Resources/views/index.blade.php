@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="tile-footer">
-            {{ $lists->render() }}
+            {{ $lists->links() }}
         </div>
     </div>
 @endsection
