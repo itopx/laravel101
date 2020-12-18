@@ -48,7 +48,9 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return view('product::show');
+        $data['result'] = Product::where('id',$id)->first();
+
+        return view('product::view', $data);
     }
 
     /**
@@ -84,6 +86,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::destroy($id);
+
+        return redirect()->route('product.index');
     }
 }

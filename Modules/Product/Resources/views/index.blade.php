@@ -35,10 +35,10 @@
                             <td width="100" class="text-nowrap">{{ $value->created_at }}</td>
                             <td width="100" class="text-nowrap">{{ $value->updated_at }}</td>
                             <td width="1" class="text-nowrap">
-                                <form method="POST" action="#">
+                                <form method="POST" action="{{ route('product.destroy', $value->id) }}">
                                     @csrf
                                     {{ method_field('DELETE') }}
-                                    <a class="btn btn-sm btn-outline-warning" target="_blank" href="#"> ดูเพิ่มเติม</a>
+                                    <a class="btn btn-sm btn-outline-warning" href="{{ route('product.show', $value->id) }}"> ดูเพิ่มเติม</a>
                                     <a class="btn btn-sm btn-info" href="{{ route('product.edit', $value->id) }}"> แก้ไข</a>
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('ท่านต้องการลบรายการนี้ใช่หรือไม่ ?')">ยกเลิก</button>
                                 </form>

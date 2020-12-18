@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
